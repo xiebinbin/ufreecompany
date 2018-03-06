@@ -252,7 +252,7 @@ information
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center">
-                    <img style="width:75%;" src="./images/banner_seven.png"/>
+                    <img style="width:70%;" src="./images/banner_seven.png"/>
                 </div>
             </div>
         </div>
@@ -469,7 +469,7 @@ information
                                 border-radius: 7px;
                                 padding-right: 1em;
                                 padding-left: 1em;
-                                width: 9em;
+                                width: 10em;
                             }
                             .apk-download{
                                 cursor: pointer;
@@ -488,7 +488,7 @@ information
                             </div>
                         </div>
                         <div class="col-sm-12" style="height:35px;line-height:35px;">
-                            <div class="apk-download">
+                            <div id="download-android" class="apk-download">
                                 <i class="fa fa-android" aria-hidden="true"></i>
                                 <small>Download</small>
                             </div>
@@ -505,7 +505,10 @@ information
 </body>
 <script>
     $(function(){
-        alert('hello');
+        $("#download-android").click(function(){
+            window.open('http://ufree.sckync.com/apk/ufree_beta_18_03_06_01.apk');
+        });
     });
 </script>
+
 </html>
