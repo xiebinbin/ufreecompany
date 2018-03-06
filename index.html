@@ -41,6 +41,9 @@
         $("#banner-one-logo").css("top",top + 'px').show();
     }
 </script>
+<link href="./font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
 <body class="background">
 <div class="container-fluid nav-bar">
     <div class="row">
@@ -454,14 +457,41 @@ information
             <div class="row">
                 <div class="col-sm-6">
                     <div class="row" style="color:#fff;">
-                        <div class="col-sm-12" style="height:30px;line-height:30px;">
+                        <div class="col-sm-12" style="height:20px;line-height:20px;">
                             FREE DOWNLOAD
                         </div>
-                        <div class="col-sm-12" style="height:30px;line-height:30px;">
-                            苹果
+                        <style>
+                            .apk-download{
+                                display: inline-block;
+                                background: #000;
+                                height: 2.2em;
+                                line-height: 2.2em;
+                                border-radius: 7px;
+                                padding-right: 1em;
+                                padding-left: 1em;
+                                width: 9em;
+                            }
+                            .apk-download{
+                                cursor: pointer;
+                            }
+                            .apk-download-disable{
+                                background: rgb(117, 117, 117);
+                                cursor:none;
+                            }
+
+                            
+                        </style>
+                        <div class="col-sm-12" style="height:35px;line-height:35px;">
+                            <div class="apk-download apk-download-disable">
+                                <i class="fa fa-apple" aria-hidden="true"></i>
+                                <small>In development</small> 
+                            </div>
                         </div>
-                        <div class="col-sm-12" style="height:30px;line-height:30px;">
-                            安卓
+                        <div class="col-sm-12" style="height:35px;line-height:35px;">
+                            <div class="apk-download">
+                                <i class="fa fa-android" aria-hidden="true"></i>
+                                <small>Download</small>
+                            </div>
                         </div>
                     </div>
                 </div>
