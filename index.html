@@ -1,513 +1,780 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UFREE</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 </head>
 <style>
-    .background{
+    .background {
         background-color: #0c266b;
     }
-    .main-background{
+
+    .main-background {
         position: fixed;
-        top:0px;
+        top: 0px;
         width: 100%;
         z-index: 10;
     }
-    .content-box{
-        top:0px;
+
+    .content-box {
+        top: 0px;
         left: 0px;
         background-image: url(./images/star_sky.png);
         background-repeat: repeat-y;
         background-size: 100% auto;
     }
-    .banner-text{
+
+    .banner-text {
         font-size: 1.35em;
         color: #fff;
         margin-top: 30px;
     }
-    .banner-logo{
+
+    .banner-logo {
         margin-top: 150px;
     }
 </style>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
 <script>
-    function countBannerOne(){
+    function countBannerOne() {
         var top = $("#banner-one").offset().top
-        $("#banner-one-logo").css("top",top + 'px').show();
+        $("#banner-one-logo").css("top", top + 'px').show();
     }
 </script>
 <link href="./font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 
 <body class="background">
-<div class="container-fluid nav-bar">
-    <div class="row">
-        <div class="col-md-2" style="line-height:50px;height:50px;">
-            <img style="width:25px;" src="./images/logo.png"/>
-        </div>
-        <div class="col-md-10 text-right">
-            <style>
-                .nav-items{
-                    list-style: none;
-                    padding: 0px;
-                    margin: 0px;
-                    display: inline-block;
-                }
-                .nav-item{
-                    display: inline-block;
-                    line-height: 50px;
-                    height: 50px;
-                    padding-right: 10px;
-                    padding-left: 10px;
-                    color:#fff;
-                }
-                .nav-item-active{
-                    color:#A479FE;
-                    border-bottom: 2px solid #A479FE;
-                }
-            </style>
-            <ul class="nav-items">
-                <li class="nav-item nav-item-active">
-                    UFREE
-                </li>
-                <li class="nav-item">
-                    MAGIC FEATURES
-                </li>
-                <li class="nav-item">
-                    THE TEAM
-                </li>
-            </ul>
-            <style>
-                .download-btn{
-                    display: inline-block;
-                    border: 1px solid #A479FE;
-                    line-height: 30px;
-                    height: 30px;
-                    padding-right: 10px;
-                    padding-left: 10px;
-                    border-radius: 15px;
-                }
-                .download-btn a{
-                    text-decoration: none;
-                    color: #A479FE;
-                }
-            </style>
-            <div class="download-btn">
-                <a href="./product_view.html">PRODUCT PREVIEW</a>
+    <div class="container-fluid nav-bar">
+        <div class="row">
+            <div class="col-md-2" style="line-height:50px;height:50px;">
+                <img style="width:25px;" src="./images/logo.png" />
             </div>
-            <div class="download-btn">
-                <a href="./download.html">DOWNLOAD</a>
-            </div>
-            <style>
-                .change-lang{
-                    display: inline-block;
-                    color: #fff;
-                    padding-left: 10px;
-                }
-            </style>
-            <div class="change-lang">
-               <span>EN</span><span class="glyphicon glyphicon-triangle-bottom"></span>
-               <style>
-                   .lang-tools{
-                        position: fixed;
+            <div class="col-md-10 text-right">
+                <style>
+                    .nav-items {
                         list-style: none;
                         padding: 0px;
                         margin: 0px;
-                        width: 5em;
-                        text-align: left;
-                        z-index:100;
-                        font-size: 12px;
-                        text-align: center;
-                        right:0px;
-                   }
-                   .lang-tools img{
-                        width: 14px;
-                        height: auto;
-                        margin-right: 4px;
-                   }
-                   .lang-item{
                         display: inline-block;
-                        width: 5em;
-                        line-height: 2em;
-                        height: 2em;
-                   }
-               </style>
-               <ul  class="lang-tools">
-                    <li class="lang-item">
-                        <img src="./images/en_lang.jpg"/>EN
+                    }
+
+                    .nav-item {
+                        display: inline-block;
+                        line-height: 50px;
+                        height: 50px;
+                        padding-right: 10px;
+                        padding-left: 10px;
+                        color: #fff;
+                    }
+
+                    .nav-item-active {
+                        color: #A479FE;
+                        border-bottom: 2px solid #A479FE;
+                    }
+                </style>
+                <ul class="nav-items">
+                    <li class="nav-item nav-item-active">
+                        UFREE
                     </li>
-                    <li class="lang-item">
-                        <img src="./images/cn_lang.jpg"/>CN
+                    <li class="nav-item">
+                        MAGIC FEATURES
+                    </li>
+                    <li class="nav-item">
+                        THE TEAM
                     </li>
                 </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid content-box">
-    <div class="row banner" id="banner-one">
-        <div class="col-md-12" style="padding-left:0px;padding-right:0px;">
-            <img onload="countBannerOne()" class="img-responsive" style="z-index:-10;position:relative;" src="./images/banner_one.jpg"/>
-        </div>
-        <!--在背景加载完成后计算位置并显示-->
-        <div id="banner-one-logo" class="text-center" style="position: absolute;margin-top:15em;width:100%;z-index:100;display:none;">
-            <img style="width:46%;" src="./images/banner_logo.png"/>
-            <p class="text-center" style="color:#fff;margin-top:5em;">Life and Consumption Experience Global Instant Sharing Platform</p>
-        </div>
-    </div>
+                <style>
+                    .download-btn {
+                        display: inline-block;
+                        border: 1px solid #A479FE;
+                        line-height: 30px;
+                        height: 30px;
+                        padding-right: 10px;
+                        padding-left: 10px;
+                        border-radius: 15px;
+                    }
 
-    <div class="row banner" id="banner-two">
-        <div class="col-md-12">
-            <h1 class="text-center" style="color:#fff;">OUR PRODUCT</h1>        
-        </div>
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-2" style="margin-top:10%;">
-                    <h4 style="color:#fff;">
-                        Globalized function design based on generality of mankind
-                    </h4>
-                    <p style="color:#fff;">
-                        As the first globalized instant sharing tool with accurate classification of social information, UFREE aims to attract users worldwide by satisfying their common desires of sharing different life and consumption experience.
-                    </p>  
+                    .download-btn a {
+                        text-decoration: none;
+                        color: #A479FE;
+                    }
+                </style>
+                <div class="download-btn">
+                    <a href="./product_view.html">PRODUCT PREVIEW</a>
                 </div>
-                <div class="col-md-6">
-                    <img class="img-responsive" src="./images/banner_two.jpg">
+                <div class="download-btn">
+                    <a href="./download.html">DOWNLOAD</a>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-12" style="padding:0px;">
-            <div class="row">
-                <div class="col-md-6" style="padding:0px;">
-                    <img class="img-responsive" src="./images/banner_three.png"/>
-                </div>
-                <div class="col-md-4" style="margin-top:15%;">
-                    <h4 class="text-right" style="color:#fff;">
-                        Double social links
-                    </h4>
-                    <p class="text-right" style="color:#fff;">
-                        The acquaintances social links will be combined with the expanding stranger social links to be the uniform system. It contains Instant Messaging in friends circle and infinite information resources searching in classified communities. All users can enjoy the customization of social information space.
-                        
-                    </p>  
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-2" style="margin-top:15%;">
-                    <h4 style="color:#fff;">
-                        Category search based on clusters information
+                <style>
+                    .change-lang {
+                        display: inline-block;
+                        color: #fff;
+                        padding-left: 10px;
+                    }
+                </style>
+                <div class="change-lang">
+                    <span>EN</span>
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                    <style>
+                        .lang-tools {
+                            position: fixed;
+                            list-style: none;
+                            padding: 0px;
+                            margin: 0px;
+                            width: 5em;
+                            text-align: left;
+                            z-index: 100;
+                            font-size: 12px;
+                            text-align: center;
+                            right: 0px;
+                        }
 
-                    </h4>
-                    <p style="color:#fff;">
-                        All posts can be labelled as 10 fields of life and consumption experience of people. We provide efficient category searching strategies for users to realize interests matching, information integration and intelligent cooperation.  
-                    </p>  
-                </div>
-                <div class="col-md-6">
-                    <img class="img-responsive" src="./images/banner_four.png">
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12" style="padding:0px;">
-            <div class="row">
-                <div class="col-md-6" style="padding:0px;">
-                    <img class="img-responsive" src="./images/banner_five.png"/>
-                </div>
-                <div class="col-md-4" style="margin-top:15%;">
-                    <h4 class="text-right" style="color:#fff;">
-                        Filtering mechanism and information flow customization
-                    </h4>
-                    <p class="text-right" style="color:#fff;">
-                        Users have self-determined options to information flow recommendation. They decide their social domain, ways and depth of social behaviors with free will. Junk information could be intercepted by filtering mechanism of platform. 
-                    </p>  
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row banner" id="banner-two">
-        <div class="col-md-12">
-            <h1 class="text-center" style="color:#fff;">MAGIC FEATURES</h1>        
-        </div>
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4">
-                    <h4 style="color:#fff;text-align:center;">
-                        Decentralized algorithm of tracking and recommending Information flows
-                    </h4>
-                    <p style="color:#fff;text-align:center;">
-                        <small>
-                            The value and degree of sharing of a single message will be the core indicators of information flows recommendation. Real words of users instead of advertising impact on users' decisions. The consensus social credit system is designed as the foundation for publicly verifying the authenticity of information and resources. The information dissemination and integration paths are traceable and open to be reviewed.
-                        </small>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1 text-center">
-                    <img style="width:85%;" src="./images/banner_six.png"/>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center">
-                    <img style="width:70%;" src="./images/banner_seven.png"/>
+                        .lang-tools img {
+                            width: 14px;
+                            height: auto;
+                            margin-right: 4px;
+                        }
+
+                        .lang-item {
+                            display: inline-block;
+                            width: 5em;
+                            line-height: 2em;
+                            height: 2em;
+                        }
+                    </style>
+                    <ul class="lang-tools" style="display: none;">
+                        <li class="lang-item">
+                            <img src="./images/en_lang.jpg" />EN
+                        </li>
+                        <li class="lang-item">
+                            <img src="./images/cn_lang.jpg" />CN
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row team">
-        <div class="col-md-12">
-            <h1 class="text-center" style="color:#fff;">THE TEAM</h1>
+    <div class="container-fluid content-box">
+        <div class="row banner" id="banner-one">
+            <div class="col-md-12" style="padding-left:0px;padding-right:0px;">
+                <img onload="countBannerOne()" class="img-responsive" style="z-index:-10;position:relative;" src="./images/banner_one.jpg"
+                />
+            </div>
+            <!--在背景加载完成后计算位置并显示-->
+            <div id="banner-one-logo" class="text-center" style="position: absolute;margin-top:15em;width:100%;z-index:100;display:none;">
+                <img style="width:46%;" src="./images/banner_logo.png" />
+                <p class="text-center" style="color:#fff;margin-top:5em;font-size:1.5em;">Decentralized Global Social Information Resource Self-help Integration Platform</p>
+                <div style="padding-left:20%;padding-right: 20%;">
+                    <p class="text-center" style="padding:15px;color:#fff;margin-top:2em;font-size:1.5em;background: linear-gradient(to right,#c04ace47, #8f5cfe47);border-radius: 10px;">Users have independent right to handle big data and realize intelligent cooperation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row banner" id="banner-two">
+            <div class="col-md-12">
+                <h1 class="text-center" style="color:#fff;">OUR PRODUCT</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2" style="margin-top:10%;">
+                        <h4 style="color:#fff;">
+                            Globalized function design based on generality of mankind
+                        </h4>
+                        <p style="color:#fff;">
+                            As the first globalized instant sharing tool with accurate classification of social information, UFREE aims to attract users
+                            worldwide by satisfying their common desires of sharing different life and consumption experience.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-responsive" src="./images/banner_two.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" style="padding:0px;">
+                <div class="row">
+                    <div class="col-md-6" style="padding:0px;">
+                        <img class="img-responsive" src="./images/banner_three.png" />
+                    </div>
+                    <div class="col-md-4" style="margin-top:15%;">
+                        <h4 class="text-right" style="color:#fff;">
+                            Double social links
+                        </h4>
+                        <p class="text-right" style="color:#fff;">
+                            The acquaintances social links will be combined with the expanding stranger social links to be the uniform system. It contains
+                            Instant Messaging in friends circle and infinite information resources searching in classified
+                            communities. All users can enjoy the customization of social information space.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2" style="margin-top:15%;">
+                        <h4 style="color:#fff;">
+                            Category search based on clusters information
+
+                        </h4>
+                        <p style="color:#fff;">
+                            All posts can be labelled as 10 fields of life and consumption experience of people. We provide efficient category searching
+                            strategies for users to realize interests matching, information integration and intelligent cooperation.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-responsive" src="./images/banner_four.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" style="padding:0px;">
+                <div class="row">
+                    <div class="col-md-6" style="padding:0px;">
+                        <img class="img-responsive" src="./images/banner_five.png" />
+                    </div>
+                    <div class="col-md-4" style="margin-top:15%;">
+                        <h4 class="text-right" style="color:#fff;">
+                            Filtering mechanism and information flow customization
+                        </h4>
+                        <p class="text-right" style="color:#fff;">
+                            Users have self-determined options to information flow recommendation. They decide their social domain, ways and depth of
+                            social behaviors with free will. Junk information could be intercepted by filtering mechanism
+                            of platform.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row banner" id="banner-two">
+            <div class="col-md-12">
+                <h1 class="text-center" style="color:#fff;">MAGIC FEATURES</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <h4 style="color:#fff;text-align:center;">
+                            Decentralized algorithm of tracking and recommending Information flows
+                        </h4>
+                        <p style="color:#fff;text-align:center;">
+                            <small>
+                                The value and degree of sharing of a single message will be the core indicators of information flows recommendation. Real
+                                words of users instead of advertising impact on users' decisions. The consensus social credit
+                                system is designed as the foundation for publicly verifying the authenticity of information
+                                and resources. The information dissemination and integration paths are traceable and open
+                                to be reviewed.
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                        <img style="width:85%;" src="./images/banner_six.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <img style="width:70%;" src="./images/banner_seven.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row team">
+            <div class="col-md-12">
+                <h1 class="text-center" style="color:#fff;">THE TEAM</h1>
+            </div>
+            <style>
+                .peple-desc {
+                    max-height: 10em;
+                    overflow: hidden;
+                    transition: max-height 1s;
+                    -moz-transition: max-height 1s;
+                    -webkit-transition: max-height 1s;
+                    -o-transition: max-height 1s;
+                    margin-bottom: 2em;
+                }
+
+                .peple-desc:hover {
+                    max-height: 30em;
+                    overflow: none;
+                }
+
+                .team {
+                    background: -webkit-linear-gradien（#0C2669, #8F5CFE);
+                    /* Safari 5.1 - 6.0 */
+                    background: -o-linear-gradient(#0C2669, #8F5CFE);
+                    /* Opera 11.1 - 12.0 */
+                    background: -moz-linear-gradient(#0C2669, #8F5CFE);
+                    /* Firefox 3.6 - 15 */
+                    background: linear-gradient(#0C2669, #8F5CFE);
+                    /* 标准的语法 */
+                }
+            </style>
+            <div class="col-md-10 col-md-offset-1" style="color:#fff;">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <img style="width:30%;border-radius:50%;" src="./images/avatar/cxy.png" />
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h4>Mavis Cao</h4>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h5>Chief Executive Officer</h5>
+                            </div>
+                            <div class="col-sm-12 text-center peple-desc">
+                                <p>
+                                    Double Master degree with sociology and journalism of The Chinese University of Hong Kong. An experienced multi-media practitioner
+                                    who always deeply concerned about long-term development of society and public affairs.
+                                    I was awarded 2010 Taiwan Cross-strait Civil Journalism Award for the work as a professional
+                                    journalist. I had engaged in strategy management for various multi-media platforms, such
+                                    as Sichuan Daily Press Group and some famous video portals. My first startup was built
+                                    in 2007, I had ever tried to build a real self-help website and serve for those who had
+                                    to pay high costs for information gap of the oversea further study and investment. For
+                                    years, my exploration of how to realize fair sharing of social resources in commercial
+                                    space with the help of information technology never stopped. UFREE is a certainty, moreover
+                                    a kind of vocation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <img style="width:30%;border-radius:50%;" src="./images/avatar/dl.png" />
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h4>Ley Dai</h4>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h5>Chief Brand Director</h5>
+                            </div>
+                            <div class="col-sm-12 text-center peple-desc">
+                                <p>
+                                    I was graduated from Monash University in Australia with Master of communication and media. I had worked in the field of
+                                    journalism and public relation for many years. About 5 years ago I worked for Western
+                                    China Metropolis Daily as a professional journalist. Before joining in UFREE, I took
+                                    charge of the PR department of Bluegogo, a sharing bike branch under operation of Didi
+                                    Chuxing. I always expected to usher in the real "era of sharing" with the help of Internet
+                                    technologies. So when I contacted with the conception of UFREE at first time, I decided
+                                    to join in and dedicated wholeheartedly to the team.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <img style="width:30%;border-radius:50%;" src="./images/avatar/lh.png" />
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h4>Hong Lee</h4>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h5>Chief Technology Director </h5>
+                            </div>
+                            <div class="col-sm-12 text-center peple-desc">
+                                <p>
+                                    Master of optical engineering in Sichuan University. I had devoted most of my time into the research of 3D image matching
+                                    technology before. I excel in using c ++ and openCV to develop camera applications fit
+                                    for commercial panoramic shooting. Besides, I took part in developing several apps, such
+                                    as Youyue Home Decoration, Liandong Yunwei and HiBeam by adopting related technologies
+                                    of Java and Android. I have a firm belief of “Just go to carry out what you believe"
+                                    ,which accords with the team spirit of UFREE. I will insist on it and see it through.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <img style="width:30%;border-radius:50%;" src="./images/avatar/xbb.png" />
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h4>Binbin Xie</h4>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h5>Software Web Developer</h5>
+                            </div>
+                            <div class="col-sm-12 text-center peple-desc">
+                                <p>
+                                    I had ever engaged in the development of web applications and become technical Co-founder of Xishi Aesthetics Workshop. I
+                                    independently developed a interesting reading app for the workshop. I am keen on deep
+                                    learning and independent thinking. I took part in UFREE because of my ideal of realizing
+                                    fair and transparent information environment in the future. I am determined to make information
+                                    technology service for ordinary people openly and equally.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <img style="width:30%;border-radius:50%;" src="./images/avatar/zxc.png" />
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h4>CC Zheng</h4>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h5>Head Director of Operations</h5>
+                            </div>
+                            <div class="col-sm-12 text-center peple-desc">
+                                <p>A 10-odd years veteran in the field of Internet product development. He had ever taken charge
+                                    of senior PM in Google Music(China), Led cooperation projects with Inter, Dell, and others.
+                                    As SVP in a large Internet company, he has discovered that in the process of pursuing
+                                    the career ideal, trend of technological development always follows real needs of users.
+                                    In practice of social product development, he wishes to testify that "cooperation" is
+                                    the essence and final goal of social interaction. For common pursuit of fair sharing
+                                    of information and resources, he joined team as Head Director of operations of UFREE.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <img style="width:30%;border-radius:50%;" src="./images/avatar/wl.png" />
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h4>Wei Long</h4>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h5>User Interface Director</h5>
+                            </div>
+                            <div class="col-sm-12 text-center peple-desc">
+                                <p> I graduated from Department of Animation of Chengdu University. I had worked for Ubi Soft
+                                    Chengdu Studio and had nine years of working experience in UI design of mobile apps.
+                                    I am a Pisces designer and adept in animation and interface creation. Actually I was
+                                    shocked by subversive idea of UFREE and its founder, I just want to join that amazing
+                                    intelligent cooperation of UFREE to see what will happen. You know, I always would like
+                                    to challenge highly difficult missions and implement impossible things.” .
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <img style="width:30%;border-radius:50%;" src="./images/avatar/zt.png" />
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h4>Asher Zhan</h4>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h5>Multi-media Director</h5>
+                            </div>
+                            <div class="col-sm-12 text-center peple-desc">
+                                <p>
+                                    An expert in multi-media production. I excel in video producing and the visual special effects. I had made various video
+                                    works for a number of large enterprises and publicity institutions while worked for a
+                                    special effects production company. As a profound social observer, I felt idea of UFREE
+                                    about effective sharing among users is in line with my imagination of the positive information
+                                    environment, so I chose to join in UFREE without hesitation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <img style="width:30%;border-radius:50%;" src="./images/avatar/zm.png" />
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h4>Mi Zhang</h4>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <h5>Back-end engineer</h5>
+                            </div>
+                            <div class="col-sm-12 text-center peple-desc">
+                                <p>
+                                    I got bachelor degree of information engineering from Xi Hua University. I have rich experience in application development
+                                    and rigorous logical thinking ability during my work. I specializes in PHP back-end engineering
+                                    and excels in database construction, optimization and back-end data cache processing.
+                                    I am very happy to join the primary development of UFREE because it is really a good
+                                    chance for me to release my mind from the chaotic internet environment and build some
+                                    new cognition.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <style>
-            .peple-desc{
-                max-height: 10em;
-                overflow: hidden;
-                transition: max-height 1s;
-                -moz-transition: max-height 1s;
-                -webkit-transition: max-height 1s;
-                -o-transition: max-height 1s;
-                margin-bottom: 2em;
-            }
-            .peple-desc:hover{
-                max-height: 30em;
-                overflow: none;
-            }
-            .team{
-                background: -webkit-linear-gradien（#0C2669,#8F5CFE); /* Safari 5.1 - 6.0 */
-                background: -o-linear-gradient(#0C2669,#8F5CFE); /* Opera 11.1 - 12.0 */
-                background: -moz-linear-gradient(#0C2669,#8F5CFE); /* Firefox 3.6 - 15 */
-                background: linear-gradient(#0C2669,#8F5CFE); /* 标准的语法 */
+            .footer {
+                line-height: 90px;
+                height: 90px;
+                background-color: #50388E;
             }
         </style>
-        <div class="col-md-10 col-md-offset-1" style="color:#fff;">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <img style="width:30%;border-radius:50%;" src="./images/avatar/cxy.png"/>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h4>Mavis Cao</h4>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h5>Chief Executive Officer</h5>
-                        </div>
-                        <div class="col-sm-12 text-center peple-desc">
-                            <p>
-                                Double Master degree with sociology and journalism of The Chinese University of Hong Kong. An experienced multi-media practitioner who always deeply concerned about long-term development of society and public affairs. I was awarded 2010 Taiwan Cross-strait Civil Journalism Award for the work as a professional journalist. I had engaged in strategy management for various multi-media platforms, such as Sichuan Daily Press Group and some famous video portals. My first startup was built in 2007, I had ever tried to build a real self-help website and serve for those who had to pay high costs for information gap of the oversea further study and investment. For years, my exploration of how to realize fair sharing of social resources in commercial space with the help of information technology never stopped. UFREE is a certainty, moreover a kind of vocation.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <img style="width:30%;border-radius:50%;" src="./images/avatar/dl.png"/>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h4>Ley Dai</h4>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h5>Chief Brand Director</h5>
-                        </div>
-                        <div class="col-sm-12 text-center peple-desc">
-                            <p>
-                                I was graduated from Monash University in Australia with Master of communication and media. I had worked in the field of journalism and public relation for many years. About 5 years ago I worked for Western China Metropolis Daily as a professional journalist. Before joining in UFREE, I took charge of the PR department of Bluegogo, a sharing bike branch under operation of Didi Chuxing. I always expected to usher in the real "era of sharing" with the help of Internet technologies. So when I contacted with the conception of UFREE at first time, I decided to join in and dedicated wholeheartedly to the team. 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <img style="width:30%;border-radius:50%;" src="./images/avatar/lh.png"/>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h4>Hong Lee</h4>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h5>Chief Technology Director </h5>
-                        </div>
-                        <div class="col-sm-12 text-center peple-desc">
-                            <p>
-                                Master of optical engineering in Sichuan University. I had devoted most of my time into the research of 3D image matching technology before. I excel in using c ++ and openCV to develop camera applications fit for commercial panoramic shooting. Besides, I took part in developing several apps, such as Youyue Home Decoration, Liandong Yunwei and HiBeam by adopting related technologies of Java and Android. I have a firm belief of “Just go to carry out what you believe" ,which accords with the team spirit of UFREE. I will insist on it and see it through.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <div class="row footer">
+            <div class="col-md-4">
+                <img style="height:30px;width:auto;" src="./images/logo.png">
+                <img style="height:15px;width:auto;" src="./images/logo_text.png">
             </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <img style="width:30%;border-radius:50%;" src="./images/avatar/xbb.png"/>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h4>Binbin Xie</h4>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h5>Software Web Developer</h5>
-                        </div>
-                        <div class="col-sm-12 text-center peple-desc">
-                            <p>
-                                I had ever engaged in the development of web applications and become technical Co-founder of Xishi Aesthetics Workshop. I independently developed a interesting reading app for the workshop. I am keen on deep learning and independent thinking. I took part in UFREE because of my ideal of realizing fair and transparent information environment in the future. I am determined to make information technology service for ordinary people openly and equally. 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <img style="width:30%;border-radius:50%;" src="./images/avatar/zxc.png"/>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h4>CC Zheng</h4>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h5>Head Director of Operations</h5>
-                        </div>
-                        <div class="col-sm-12 text-center peple-desc">
-                            <p>A 10-odd years veteran in the field of Internet product development. He had ever taken charge of senior PM in Google Music(China), Led cooperation projects with Inter, Dell, and others. As SVP in a large Internet company, he has discovered that in the process of pursuing the career ideal, trend of technological development always follows real needs of users. In practice of social product development, he wishes to testify that "cooperation" is the essence and final goal of social interaction. For common pursuit of fair sharing of information and resources, he joined team as Head Director of operations of UFREE.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <img style="width:30%;border-radius:50%;" src="./images/avatar/wl.png"/>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h4>Wei Long</h4>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h5>User Interface Director</h5>
-                        </div>
-                        <div class="col-sm-12 text-center peple-desc">
-                            <p> I graduated from Department of Animation of Chengdu University. I had worked for Ubi Soft Chengdu Studio and had nine years of working experience in UI design of mobile apps. I am a Pisces designer and adept in animation and interface creation. Actually I was shocked by subversive idea of UFREE and its founder, I just want to join that amazing intelligent cooperation of UFREE to see what will happen. You know, I always would like to challenge highly difficult missions and implement impossible things.”
-                                .</p>
-                        </div>
-                    </div>
-                </div>   
+            <div class="col-md-4">
+                <p style="color:#fff;margin:0px;">
+                    <small>CHENGDI.SICHUAN.CHINA team@ufree.vip</small>
+                </p>
             </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <img style="width:30%;border-radius:50%;" src="./images/avatar/zt.png"/>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h4>Asher Zhan</h4>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h5>Multi-media Director</h5>
-                        </div>
-                        <div class="col-sm-12 text-center peple-desc">
-                            <p>
-                               An expert in multi-media production. I excel in video producing and the visual special effects. I had made various video works for a number of large enterprises and publicity institutions while worked for a special effects production company. As a profound social observer, I felt idea of UFREE about effective sharing among users is in line with my imagination of the positive information environment, so I chose to join in UFREE without hesitation.	  
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <img style="width:30%;border-radius:50%;" src="./images/avatar/zm.png"/>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h4>Mi Zhang</h4>
-                        </div>
-                        <div class="col-sm-12 text-center">
-                            <h5>Back-end engineer</h5>
-                        </div>
-                        <div class="col-sm-12 text-center peple-desc">
-                            <p>
-                                    I got bachelor degree of information engineering from Xi Hua University. I have rich experience in application development and rigorous logical thinking ability during my work. I specializes in PHP back-end engineering and excels in database construction, optimization and back-end data cache processing. I am very happy to join the primary development of UFREE because it is really a good chance for me to release my mind from the chaotic internet environment and build some new cognition.
-                            </p>
-                        </div>
-                    </div>
-                </div>   
-            </div>
-        </div>
-    </div>
-    <style>
-        .footer{
-            line-height: 90px;
-            height: 90px;
-            background-color: #50388E;
-        }
-    </style>
-    <div class="row footer">
-        <div class="col-md-4">
-            <img style="height:30px;width:auto;" src="./images/logo.png">
-            <img style="height:15px;width:auto;" src="./images/logo_text.png">
-        </div>
-        <div class="col-md-4">
-            <p style="color:#fff;margin:0px;">
-                <small>CHENGDI.SICHUAN.CHINA team@ufree.vip</small>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="row" style="color:#fff;">
-                        <div class="col-sm-12" style="height:20px;line-height:20px;">
-                            FREE DOWNLOAD
-                        </div>
-                        <style>
-                            .apk-download{
-                                display: inline-block;
-                                background: #000;
-                                height: 2.2em;
-                                line-height: 2.2em;
-                                border-radius: 7px;
-                                padding-right: 1em;
-                                padding-left: 1em;
-                                width: 10em;
-                            }
-                            .apk-download{
-                                cursor: pointer;
-                            }
-                            .apk-download-disable{
-                                background: rgb(117, 117, 117);
-                                cursor:none;
-                            }
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row" style="color:#fff;">
+                            <div class="col-sm-12" style="height:20px;line-height:20px;">
+                                FREE DOWNLOAD
+                            </div>
+                            <style>
+                                .apk-download {
+                                    display: inline-block;
+                                    background: #000;
+                                    height: 2.2em;
+                                    line-height: 2.2em;
+                                    border-radius: 7px;
+                                    padding-right: 1em;
+                                    padding-left: 1em;
+                                    width: 10em;
+                                }
 
-                            
-                        </style>
-                        <div class="col-sm-12" style="height:35px;line-height:35px;">
-                            <div class="apk-download apk-download-disable">
-                                <i class="fa fa-apple" aria-hidden="true"></i>
-                                <small>In development</small> 
+                                .apk-download {
+                                    cursor: pointer;
+                                }
+
+                                .apk-download-disable {
+                                    background: rgb(117, 117, 117);
+                                    cursor: none;
+                                }
+                            </style>
+                            <div class="col-sm-12" style="height:35px;line-height:35px;">
+                                <div class="apk-download apk-download-disable">
+                                    <i class="fa fa-apple" aria-hidden="true"></i>
+                                    <small>In development</small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-12" style="height:35px;line-height:35px;">
-                            <div id="download-android" class="apk-download">
-                                <i class="fa fa-android" aria-hidden="true"></i>
-                                <small>Download</small>
+                            <div class="col-sm-12" style="height:35px;line-height:35px;">
+                                <div id="download-android" class="apk-download">
+                                    <i class="fa fa-android" aria-hidden="true"></i>
+                                    <small>Download</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <img style="height:45px;" src="./images/qr.png"
+                    <div class="col-sm-6">
+                        <img style="height:45px;" src="./images/qr.png" </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+        <div id=“qa-box”>
+            <div class="qa-title">
+                <p>都用到这里</p>
+            </div>
+            <div class="qa-btn"></div>
+        </div>
+        <style>
+            .questions-box {
+                left: 0px;
+                display: none;
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                z-index: 1000;
+                top: 0;
+                text-align: center;
+                background-color: #00000082;
+            }
+
+            .questions-bg {
+                background-image: url('./images/questions/bg.png');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+
+            .questions-bg,
+            .questions-btn-box {
+                text-align: center;
+                width: 100%;
+                display: inline-block;
+            }
+
+            .questions-bg img {
+                width: 100%;
+                height: auto;
+            }
+
+            .questions-bg p {
+                color: #fff;
+                left: 20%;
+                width: 100%;
+                display: inline-block;
+                font-size: 1.2em;
+            }
+            #questions-title{
+                font-size: 1.8em;
+                font-weight: bold;
+                padding: 15% 15% 0% 15%;
+            }
+            #questions-content{
+                padding: 0% 15% 15% 15%;
+            }
+            #questions-result{
+                display: none;
+                padding: 20% 15% 20% 15%;
+                font-size:1.5em;
+            }
+
+            .questions-btn-two,
+            .questions-btn-one {
+                display: inline-block;
+                width: 48%;
+            }
+
+            .questions-btn-two img,
+            .questions-btn-one img {
+                width: 100%;
+            }
+
+            .questions-btn-text {
+                width: 100%;
+                position: relative;
+                top: -47px;
+                color: #fff;
+                font-size: 2em;
+            }
+
+            .questions-btn-one button,
+            .questions-btn-two button {
+                width: 90%;
+                padding: 5%;
+                background-color: rgba(red, green, blue, 0);
+                color: #fff;
+                background-image: url('./images/questions/btn_two.png');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                margin: 0px;
+                border: 0px;
+                background-color: #fff0;
+                outline: none;
+                font-size: 1.4em;
+            }
+
+            .questions-btn-two button {
+                background-image: url('./images/questions/btn_one.png');
+            }
+            .questions-container{
+                margin-top: 5%;
+                padding-bottom: 15px;
+                width: 60%;
+                display: inline-block;
+            }
+        </style>
+        <div class="questions-box" id="questions-box">
+            <div class="questions-container">
+                <div class="questions-bg">
+                    <p id="questions-title">Do you want your online social life to be like this?</p>
+                    <p id="questions-content">
+                        no advertising，no leakage and no barrier on social platform.  Users are master of big data！ U can grasp various real information resources without deep penetration of commercial capitals. Unity of global users can build valuable connections with each other to realize intelligent cooperation.
+                    </p>
+                    <p id="questions-result"></p>
+                </div>
+                <div class="questions-btn-box" id="questions-btn-box">
+                    <div class="questions-btn-one">
+                        <button id="btn-one">YES</button>
+                    </div>
+                    <div class="questions-btn-two">
+                        <button id="btn-two">NO</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 </body>
 <script>
-    $(function(){
-        $("#download-android").click(function(){
-            window.open('http://ufree.sckync.com/apk/ufree_beta_18_03_06_01.apk');
+    let req = false;
+    $(function () {
+        if(/zh/.test(navigator.language) === false){
+            $("#questions-box").show();
+        } 
+        var changeOverflow = function (val) {
+            $('body').css({overflow: val});
+            $('html').css({overflow: val});
+        };
+        // 检测语言环境决定是否显示
+        changeOverflow('hidden');
+        $("#download-android").click(function () {
+            window.open('https://www.pgyer.com/mm0Z');
         });
+        $("#btn-one").click(function(){
+            if (req) {
+                return false;
+            }
+            //提交一个jsonp请求
+            $.ajax({
+                type: 'GET',
+                url: 'http://ufree.sckync.com/api/enqa',
+                data: {
+                    answer: 'Y',
+                    lang: navigator.language,
+                    user_agent: navigator.userAgent
+                },
+                success: function (data) {
+                    console.log(data)
+                },
+                dataType: 'jsonp'
+            });
+            $("#questions-btn-box").hide();
+            $("#questions-title").hide();
+            $("#questions-content").hide();
+            $("#questions-result").html("Then, <span style=\"font-size:2.5em;\">UFREE</span> <br/><span style=\"padding-left:1.1em;\">is coming for you soon……</span>");
+            $("#questions-result").css({'font-size': '2em'});
+            $("#questions-result").show();
+            setTimeout(function(){
+                changeOverflow('auto');
+                $("#questions-box").fadeOut(1000,function(){});
+            },3000);
+        });
+        $("#btn-two").click(function(){
+            if (req) {
+                return false;
+            }
+            //提交一个jsonp请求
+            $.ajax({
+                type: 'GET',
+                url: 'http://ufree.sckync.com/api/enqa',
+                data: {
+                    answer: 'N',
+                    lang: navigator.language,
+                    user_agent: navigator.userAgent
+                },
+                success: function (data) {
+                    console.log(data)
+                },
+                dataType: 'jsonp'
+            });
+            $("#questions-btn-box").hide();
+            $("#questions-title").hide();
+            $("#questions-content").hide();
+            $("#questions-result").html("You may not know，It is BUSINESS MODE of Facebook instead of its Technical Negligence hurt your privacy deadly.");
+            $("#questions-result").show();
+            setTimeout(function(){
+                changeOverflow('auto');
+                $("#questions-box").fadeOut(1000,function(){});
+            },3000);
+        });
+
     });
 </script>
 
