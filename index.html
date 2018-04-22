@@ -622,18 +622,21 @@
                 display: inline-block;
                 font-size: 1.2em;
             }
-            #questions-title{
+
+            #questions-title {
                 font-size: 1.8em;
                 font-weight: bold;
                 padding: 15% 15% 0% 15%;
             }
-            #questions-content{
+
+            #questions-content {
                 padding: 0% 15% 15% 15%;
             }
-            #questions-result{
+
+            #questions-result {
                 display: none;
                 padding: 20% 15% 20% 15%;
-                font-size:1.5em;
+                font-size: 1.5em;
             }
 
             .questions-btn-two,
@@ -674,7 +677,8 @@
             .questions-btn-two button {
                 background-image: url('./images/questions/btn_one.png');
             }
-            .questions-container{
+
+            .questions-container {
                 margin-top: 5%;
                 padding-bottom: 15px;
                 width: 60%;
@@ -686,7 +690,9 @@
                 <div class="questions-bg">
                     <p id="questions-title">Do you want your online social life to be like this?</p>
                     <p id="questions-content">
-                        no advertising，no leakage and no barrier on social platform.  Users are master of big data！ U can grasp various real information resources without deep penetration of commercial capitals. Unity of global users can build valuable connections with each other to realize intelligent cooperation.
+                        no advertising，no leakage and no barrier on social platform. Users are master of big data！ U can grasp various real information
+                        resources without deep penetration of commercial capitals. Unity of global users can build valuable
+                        connections with each other to realize intelligent cooperation.
                     </p>
                     <p id="questions-result"></p>
                 </div>
@@ -705,19 +711,20 @@
 <script>
     let req = false;
     $(function () {
-        if(/zh/.test(navigator.language) === false){
+        if (/zh/.test(navigator.language) === false) {
+            // 检测语言环境决定是否显示
+            changeOverflow('hidden');
             $("#questions-box").show();
-        } 
+        }
         var changeOverflow = function (val) {
-            $('body').css({overflow: val});
-            $('html').css({overflow: val});
+            $('body').css({ overflow: val });
+            $('html').css({ overflow: val });
         };
-        // 检测语言环境决定是否显示
-        changeOverflow('hidden');
+
         $("#download-android").click(function () {
             window.open('https://www.pgyer.com/mm0Z');
         });
-        $("#btn-one").click(function(){
+        $("#btn-one").click(function () {
             if (req) {
                 return false;
             }
@@ -739,14 +746,14 @@
             $("#questions-title").hide();
             $("#questions-content").hide();
             $("#questions-result").html("Then, <span style=\"font-size:2.5em;\">UFREE</span> <br/><span style=\"padding-left:1.1em;\">is coming for you soon……</span>");
-            $("#questions-result").css({'font-size': '2em'});
+            $("#questions-result").css({ 'font-size': '2em' });
             $("#questions-result").show();
-            setTimeout(function(){
+            setTimeout(function () {
                 changeOverflow('auto');
-                $("#questions-box").fadeOut(1000,function(){});
-            },3000);
+                $("#questions-box").fadeOut(1000, function () { });
+            }, 3000);
         });
-        $("#btn-two").click(function(){
+        $("#btn-two").click(function () {
             if (req) {
                 return false;
             }
@@ -769,13 +776,22 @@
             $("#questions-content").hide();
             $("#questions-result").html("You may not know，It is BUSINESS MODE of Facebook instead of its Technical Negligence hurt your privacy deadly.");
             $("#questions-result").show();
-            setTimeout(function(){
+            setTimeout(function () {
                 changeOverflow('auto');
-                $("#questions-box").fadeOut(1000,function(){});
-            },3000);
+                $("#questions-box").fadeOut(1000, function () { });
+            }, 3000);
         });
 
     });
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6d0e64ea7809bd60abfbdb42fb80148a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
 </script>
 
 </html>
