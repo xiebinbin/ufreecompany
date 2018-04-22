@@ -711,16 +711,15 @@
 <script>
     let req = false;
     $(function () {
+        var changeOverflow = function (val) {
+            $('body').css({ overflow: val });
+            $('html').css({ overflow: val });
+        };
         if (/zh/.test(navigator.language) === false) {
             // 检测语言环境决定是否显示
             changeOverflow('hidden');
             $("#questions-box").show();
         }
-        var changeOverflow = function (val) {
-            $('body').css({ overflow: val });
-            $('html').css({ overflow: val });
-        };
-
         $("#download-android").click(function () {
             window.open('https://www.pgyer.com/mm0Z');
         });
